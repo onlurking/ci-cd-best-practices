@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js",
-    "lint": "eslint index.js"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint index.js",
+    "lint:fix": "eslint index.js --fix"
   },
   "dependencies": {
     "express": "^4.17.1"
@@ -19,6 +22,14 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.1",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "collectCoverageFrom": ["**/**.js",
+    "!**/node_modules/**",
+    "!**/coverage/**"
+  ]
+    
   }
 }
